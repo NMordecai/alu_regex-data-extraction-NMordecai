@@ -2,29 +2,42 @@
 # Pythonic Regular Expression Validator
 This Python script provides a set of utility functions for validating common data formats using regular expressions for specific types of data you receive from the API.
 ## Data types 
-Email addresses
-URLs
-Phone numbers
-Credit card numbers
-Time in 12-hour or 24-hour format
-HTML tags
-Hashtags
-Currency amounts
+Email addresses, 
+URLs, 
+Phone numbers, 
+Credit card numbers, 
+Time in 12-hour or 24-hour format, 
+HTML tags, 
+Hashtags, and 
+Currency amounts. 
 ## specific data types
-Phone numbers
-Credit card numbers
-Hashtags
-Currency amounts
+Phone numbers, 
+Credit card numbers, 
+Hashtags, 
+Currency amounts, Email address, time and URLs
 
 ### This Python script includes the following functions:
 
-validate_phone_number(phone_number):  Validates phone numbers in various formats, including (XXX) XXX-XXXX, XXX-XXX-XXXX, and XXX.XXX.XXXX.
+#### validate_email(email): 
+This function validates email addresses using a regular expression that checks for the standard format of user@domain.tld.
 
-validate_credit_card_number(card_number): Validates credit card numbers with and without hyphens or spaces.
+#### validate_url(URL):
+This function is designed to determine if a given string is a valid URL.  It checks the URL against a defined pattern to ensure it follows the general structure of a web address. The code defines a function named validate_url that takes one argument (url (str):) the string that the function will check to see if it's a valid URL
 
-validate_hashtag(hashtag): Validates hashtags, ensuring they start with '#' and contain only alphanumeric characters and underscores.
+#### validate_phone_number(phone_number): 
+Validates phone numbers in various formats, including (XXX) XXX-XXXX, XXX-XXX-XXXX, and XXX.XXX.XXXX.
 
-validate_currency_amount(amount): Validates currency amounts in the format of $X.XX, $X,XXX.XX, and $XX.XX
+#### validate_credit_card_number(card_number): 
+Validates credit card numbers with and without hyphens or spaces.
+
+#### validate_time(time_str): 
+This function validates time strings in both 24-hour format (e.g., 14:30) and 12-hour format (e.g., 2:30 PM). It uses separate regular expressions for each format and checks if the input matches either of them.
+
+#### validate_hashtag(hashtag): 
+Validates hashtags, ensuring they start with '#' and contain only alphanumeric characters and underscores.
+
+#### validate_currency_amount(amount): 
+Validates currency amounts in the format of $X.XX, $X,XXX.XX, and $XX.XX
 
 Each function uses a regular expression to check if the input string matches the expected format.  The code is well-documented with function-level comments and inline comments to explain the regular expressions.  The if __name__ == "__main__": block provides example test cases for each function, demonstrating their usage and expected output.
 
